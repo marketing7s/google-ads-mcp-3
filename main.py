@@ -399,5 +399,6 @@ async def get_account_summary(params: DateRangeInput) -> str:
 if __name__ == "__main__":
     import uvicorn
     port = int(os.environ.get("PORT", 8000))
-    app = mcp.get_asgi_app()
+    app = mcp.streamable_http_app()
     uvicorn.run(app, host="0.0.0.0", port=port)
+```
